@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>系统管理员</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="../authorize/js/request.js"></script>
+    <script src="../authorize/js/md5.js"></script>
+    <script src="js/administrator.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2>系统后台管理页面</h2>
+        <a href="javascript:void(0)" onclick="logout()">安全退出登录</a>
+        <a href="../personal/index.html">个人主页</a>
+    </div>
+</div>
+<div class="main">
+    <div class="left">
+        <div class="menu active" onclick="clickMenu(0)"><a href="javascript:void(0)">用户账号信息</a></div>
+        <div class="menu" onclick="clickMenu(1)"><a href="javascript:void(0)">用户个人信息</a></div>
+    </div>
+    <div class="right">
+        <div class="search">
+            <span>您可以使用手机号、邮箱或者学号进行精确搜索，也可以使用用户名、姓名、学校、学院、专业和籍贯进行模糊搜索</span>
+            <input type="text">
+            <button onclick="getUserBySearch(this.previousElementSibling.value)">搜索</button>
+            <button onclick="getAllUser()">显示全部</button>
+        </div>
+        <table>
+            <thead id="table-head">
+            <!--            <th>用户唯一ID</th>-->
+            <!--            <th>用户名</th>-->
+            <!--            <th>电话</th>-->
+            <!--            <th>邮箱</th>-->
+            <!--            <th>用户创建时间</th>-->
+            <!--            <th>管理员</th>-->
+            <!--            <th>已启用</th>-->
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+        </table>
+    </div>
+
+</div>
+
+
+<div class="back hide-display" id="pop">
+    <div class="pop_content">
+        <div class="confirm">确认删除该联系信息吗?</div>
+        <div style="display: flex">
+            <div class="cancel fl pop_select">取消</div>
+            <div class="sure fl pop_select">确定</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

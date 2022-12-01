@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>系统登录</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode: '6307f3e26777427669bd87259df128fc',
+        }
+    </script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=8ef5370880cc652795d5b0b7d0186675"></script>
+    <script src="js/request.js"></script>
+    <script src="js/md5.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/loginPage.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <div>
+            <span class="title" style="border: unset">Web实验-登陆系统</span>
+            <span class="title">统一身份认证</span>
+            <h3>亲爱的用户，</h3>
+        </div>
+        <div class="weather-container">
+            <div class="weather">
+                <div class="location">
+                    <img src="images/location.png" alt="location"/>
+                    <span>定位中...</span>
+                </div>
+                <div class="weather-icon">
+                    <img src="images/weather/云.png" alt="weather"/>
+                </div>
+                <p style="font-size: 20px">Today, 16 May</p>
+                <p class="temperature"><span>--</span><span>℃</span></p>
+                <p>晴</p>
+                <div style="height: 20px"></div>
+                <div class="more-info">
+                    <div><img src="images/1.png" style="width: 20px;height: 20px"><span>风力</span></div>
+                    <div></div>
+                </div>
+                <div class="more-info">
+                    <div><img src="images/2.png" style="width: 15px;height: 20px;margin-right: 3px"><span>湿度</span>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="more-info">
+                    <div><img src="images/2.png"
+                              style="width: 15px;height: 20px;margin-right: 3px"><span>更新时间</span>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="weather-right">
+                <div class="weather-item">
+                    <div class="weather-item-container">
+                        <div class="information">
+                            <div class="more-info">
+                                <div><img src="images/1.png" style="width: 20px;height: 20px"><span>风力</span></div>
+                                <div class="predict-wind">15</div>
+                            </div>
+                            <div class="more-info">
+                                <div><img src="images/2.png"
+                                          style="width: 15px;height: 20px;margin-right: 3px"><span>天气</span>
+                                </div>
+                                <div class="predict-weather-name">50%</div>
+                            </div>
+                        </div>
+                        <div class="temperature">
+                            <p>11-25</p>
+                            <span>26</span>
+                            <span>°</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-item">
+                    <div class="weather-item-container">
+                        <div class="information">
+                            <div class="more-info">
+                                <div><img src="images/1.png" style="width: 20px;height: 20px"><span>风力</span></div>
+                                <div class="predict-wind">15</div>
+                            </div>
+                            <div class="more-info">
+                                <div><img src="images/2.png"
+                                          style="width: 15px;height: 20px;margin-right: 3px"><span>天气</span>
+                                </div>
+                                <div class="predict-weather-name">50%</div>
+                            </div>
+                        </div>
+                        <div class="temperature">
+                            <p>11-25</p>
+                            <span>26</span>
+                            <span>°</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-item">
+                    <div class="weather-item-container">
+                        <div class="information">
+                            <div class="more-info">
+                                <div><img src="images/1.png" style="width: 20px;height: 20px"><span>风力</span></div>
+                                <div class="predict-wind">15</div>
+                            </div>
+                            <div class="more-info">
+                                <div><img src="images/2.png"
+                                          style="width: 15px;height: 20px;margin-right: 3px"><span>天气</span>
+                                </div>
+                                <div class="predict-weather-name">50%</div>
+                            </div>
+                        </div>
+                        <div class="temperature">
+                            <p>11-25</p>
+                            <span>26</span>
+                            <span>°</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-item">
+                    <div class="weather-item-container">
+                        <div class="information">
+                            <div class="more-info">
+                                <div><img src="images/1.png" style="width: 20px;height: 20px"><span>风力</span></div>
+                                <div class="predict-wind">15</div>
+                            </div>
+                            <div class="more-info">
+                                <div><img src="images/2.png"
+                                          style="width: 15px;height: 20px;margin-right: 3px"><span>天气</span>
+                                </div>
+                                <div class="predict-weather-name">50%</div>
+                            </div>
+                        </div>
+                        <div class="temperature">
+                            <p>11-25</p>
+                            <span>26</span>
+                            <span>°</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="main">
+            <div class="header">
+                <div class="item active" onclick="clickHeaderItem(this)">
+                    <p>账号登录</p>
+                </div>
+                <div class="item" onclick="clickHeaderItem(this)">
+                    <p>用户注册</p>
+                </div>
+            </div>
+            <!--登录-->
+            <div class="input-area active">
+                <form>
+                    <div class="input-item">
+                        <img src="images/user1.png" alt="user"/>
+                        <input id="username" type="text" placeholder="输入账号、邮箱或手机号">
+                    </div>
+                    <div class="input-item">
+                        <img src="images/pass1.png" alt="user"/>
+                        <input id="password" type="password" placeholder="密码">
+                    </div>
+                    <div class="info">
+                        <p></p>
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox" id="remember">七天免登录
+                        <a href="forgetPwd.html" style="float: right">忘记密码</a>
+                    </div>
+                </form>
+                <div>
+
+                </div>
+                <div class="login-btn">
+                    <a href="javascript:void(0)" onclick="login()">登录</a>
+                </div>
+            </div>
+            <!--注册-->
+            <div class="input-area">
+                <form>
+                    <div class="input-item">
+                        <img src="images/user1.png" alt="user"/>
+                        <input id="username-register" type="text" placeholder="账号">
+                    </div>
+                    <div class="input-item">
+                        <img src="images/pass1.png" alt="user"/>
+                        <input id="password-register" type="password" placeholder="密码">
+                    </div>
+                    <div class="input-item">
+                        <img src="images/pass1.png" alt="user"/>
+                        <input id="password-again-register" type="password" placeholder="请再次输入密码">
+                    </div>
+                    <div class="info">
+                        <p></p>
+                    </div>
+                </form>
+                <div class="login-btn">
+                    <a href="javascript:void(0)" onclick="register()">注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

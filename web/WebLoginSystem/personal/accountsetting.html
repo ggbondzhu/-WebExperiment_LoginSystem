@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人简历</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="../authorize/js/request.js"></script>
+    <script src="../authorize/js/md5.js"></script>
+    <script src="js/personal.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="leftHeader">
+        <h2>个人简历</h2>
+    </div>
+    <div class="nav">
+        <ul>
+            <li class="index" style="border-top: unset">
+                <a href="index.html">首页</a>
+            </li>
+            <li class="speciality">
+                <a href="javascript:void(0)">特长</a>
+            </li>
+            <li class="experience">
+                <a href="javascript:void(0)">经历</a>
+            </li>
+            <li class="about">
+                <a href="javascript:void(0)">关于</a>
+            </li>
+            <li class="about" style="border-top: 3px solid #28B1FF;">
+                <a href="accountsetting.html">账户设置</a>
+            </li>
+            <div style="display: inline-block">
+                <a href="javascript:void(0)" onclick="logout()">安全退出登录</a>
+            </div>
+        </ul>
+    </div>
+</div>
+
+<div class="main">
+    <div class="left">
+        <img class="avatar" src="" id="avatar">
+        <h3 id="name">未登录</h3>
+        <h4>基本信息</h4>
+        <div class="split_line"></div>
+        <div id="base-info">
+            <!--            <div>-->
+            <!--                <p>性别：</p>-->
+            <!--                <p>男</p>-->
+            <!--            </div>-->
+
+            <!--            <div>-->
+            <!--                <p>籍贯：</p>-->
+            <!--                <p>湖南长沙</p>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <p>学校：</p>-->
+            <!--                <p>朝阳大学</p>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <p>学院：</p>-->
+            <!--                <p>计算机学院</p>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <p>专业：</p>-->
+            <!--                <p>计算机科学与技术</p>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <p>学号：</p>-->
+            <!--                <p>123456789</p>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <p>电话：</p>-->
+            <!--                <p>15566668888</p>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <p>邮箱：</p>-->
+            <!--                <p>example@pku.edu.cn</p>-->
+            <!--            </div>-->
+        </div>
+        <h4>数字人生</h4>
+        <div class="split_line"></div>
+        <div class="data_info">
+            <div class="data_item">
+                <p class="data_value" id="age">--</p>
+                <p class="label">年龄</p>
+            </div>
+            <div class="data_item">
+                <p class="data_value" id="projectNum">--</p>
+                <p class="label">项目数</p>
+            </div>
+            <div class="data_item">
+                <p class="data_value" id="fansNum">--</p>
+                <p class="label">粉丝数</p>
+            </div>
+            <div class="data_item">
+                <p class="data_value" id="assetNum">--</p>
+                <p class="label">资产</p>
+            </div>
+        </div>
+        <h4>联系方式</h4>
+        <div class="split_line"></div>
+        <div class="contact">
+            <img src="images/TR.png">
+            <img src="images/IG.png">
+            <img src="images/FB.png">
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="title">
+            <p>账号信息修改</p>
+        </div>
+        <div class="modify-avatar">
+            <p class="modify-title">修改头像</p>
+            <img id="image-preview" src="images/avatar.webp" style="height: 250px;width: 250px;border-radius: 10px">
+            <p>
+                <input type="file" id="file" name="upload_image"
+                       accept="image/gif, image/jpeg, image/png, image/jpg">
+            </p>
+            <p id="info"></p>
+            <button onclick="clickUploadAvatarBtn()">上传头像</button>
+        </div>
+        <div class="">
+            <p class="modify-title">修改密码</p>
+            <div class="input-area">
+                <form>
+                    <div class="input-item">
+                        <img src="../authorize/images/pass1.png" alt="user"/>
+                        <input id="password-old-register" type="password" placeholder="请输入原密码">
+                    </div>
+                    <div class="input-item">
+                        <img src="../authorize/images/pass1.png" alt="user"/>
+                        <input id="password-register" type="password" placeholder="请输入新密码">
+                    </div>
+                    <div class="input-item">
+                        <img src="../authorize/images/pass1.png" alt="user"/>
+                        <input id="password-again-register" type="password" placeholder="请再次输入新密码">
+                    </div>
+                    <div class="info" id="password-info">
+                        <p></p>
+                    </div>
+                </form>
+                <button class="login-btn" onclick="clickModifyPasswordBtn()">修改密码
+                </button>
+            </div>
+
+        </div>
+        <div class="">
+            <p class="modify-title">账号注销</p>
+            <p>您可以点击下方按钮申请注销账号，注销后，账户将不再能使用，请注意，此操作不可逆！</p>
+            <button class="modify-btn" onclick="clickDeleteBtn()">注销账号</button>
+            <span style="color: red;display: none">谨慎操作！如您仍要注销，请5秒后再次点击按钮确认注销。</span>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Copyright ©87803, 2022, All Rights Reserved.</p>
+</div>
+</body>
+<!--由于两个页面使用同一js，仅本页面需要设置监听，在这里单独调用函数-->
+<script>addUploadAvatarListener()
+</script>
+</html>

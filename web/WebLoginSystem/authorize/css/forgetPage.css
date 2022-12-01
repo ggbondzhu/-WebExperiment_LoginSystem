@@ -1,0 +1,37 @@
+.right {
+    width: 100%;
+    background-image: url("../images/bg.jpg");
+    min-height: 100vh;
+
+
+}
+
+.backdrop {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    padding-top: 50px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.right .main {
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.main h2 {
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

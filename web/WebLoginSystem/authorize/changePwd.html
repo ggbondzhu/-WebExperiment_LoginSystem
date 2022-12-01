@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>设置新密码</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/forgetPage.css" rel="stylesheet" type="text/css"/>
+    <script src="js/md5.js"></script>
+    <script src="js/request.js"></script>
+    <script src="js/changePwdPage.js"></script>
+</head>
+<body>
+<div class="right">
+    <div class="backdrop">
+        <div class="main">
+            <h2>请设置新密码</h2>
+            <div class="header">
+                <div class="item active" onclick="clickHeaderItem(this)">
+                    <p>输入新密码</p>
+                </div>
+            </div>
+            <!--注册-->
+            <div class="input-area active">
+                <form>
+                    <div class="input-item">
+                        <img src="images/user1.png" alt="user"/>
+                        <input id="username-register" type="text" placeholder="账号" disabled="disabled">
+                    </div>
+                    <div class="input-item">
+                        <img src="images/pass1.png" alt="user"/>
+                        <input id="password-register" type="password" placeholder="请输入新密码">
+                    </div>
+                    <div class="input-item">
+                        <img src="images/pass1.png" alt="user"/>
+                        <input id="password-again-register" type="password" placeholder="请再次输入密码">
+                    </div>
+                    <div class="info">
+                        <p></p>
+                    </div>
+                </form>
+                <div class="login-btn">
+                    <a href="javascript:void(0)" onclick="submitNewPassword()">提交</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

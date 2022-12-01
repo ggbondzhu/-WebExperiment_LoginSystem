@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>重置密码</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/forgetPage.css" rel="stylesheet" type="text/css"/>
+    <script src="js/request.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/forgetPwdPage.js"></script>
+</head>
+<body>
+<div class="right">
+    <div class="backdrop">
+        <div class="main">
+            <h2>请选择找回方式</h2>
+            <div class="header">
+                <div class="item active" onclick="clickHeaderItem(this)">
+                    <p>验证码找回</p>
+                </div>
+                <div class="item" onclick="clickHeaderItem(this)">
+                    <p>安全信息找回</p>
+                </div>
+            </div>
+            <!--登录-->
+            <div class="input-area active">
+                <form>
+                    <div class="input-item">
+                        <img src="images/user1.png" alt="user"/>
+                        <input id="email-email" type="email" name="email-email" placeholder="邮箱">
+                    </div>
+                    <div class="input-item">
+                        <img src="images/captcha.png" alt="user"/>
+                        <input id="email-code" type="number" placeholder="验证码">
+                        <button type="button" onclick="getVilificationCode()" id="getCodeButton">发送验证码</button>
+                    </div>
+                    <div class="info">
+                        <p></p>
+                    </div>
+                </form>
+                <div class="login-btn">
+                    <a href="javascript:void(0)" onclick="submitEmailVilification()">下一步</a>
+                </div>
+            </div>
+            <!--注册-->
+            <div class="input-area">
+                <form>
+                    <div class="input-item">
+                        <img src="images/user1.png" alt="user"/>
+                        <input id="info-username" type="text" placeholder="账号">
+                    </div>
+                    <div class="input-item">
+                        <img src="images/pass1.png" alt="user"/>
+                        <input id="info-phone" type="number" placeholder="手机号">
+                    </div>
+                    <div class="input-item">
+                        <img src="images/captcha.png" alt="user"/>
+                        <input id="info-email" type="email" placeholder="邮箱">
+                    </div>
+                    <div class="info">
+                        <p></p>
+                    </div>
+                </form>
+                <div class="login-btn">
+                    <a href="javascript:void(0)" onclick="submitInfoVilification()">下一步</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

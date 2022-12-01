@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人简历</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="../authorize/js/request.js"></script>
+    <script src="../authorize/js/md5.js"></script>
+    <script src="js/personal.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="leftHeader">
+        <h2>个人简历</h2>
+    </div>
+    <div class="nav">
+        <ul>
+            <li class="index">
+                <a href="index.html">首页</a>
+            </li>
+            <li class="speciality">
+                <a href="javascript:void(0)">特长</a>
+            </li>
+            <li class="experience">
+                <a href="javascript:void(0)">经历</a>
+            </li>
+            <li class="about">
+                <a href="javascript:void(0)">关于</a>
+            </li>
+            <li class="about">
+                <a href="accountsetting.html">账户设置</a>
+            </li>
+            <div style="display: inline-block">
+                <a href="javascript:void(0)" onclick="logout()">安全退出登录</a>
+            </div>
+        </ul>
+    </div>
+</div>
+
+<div class="main">
+    <div class="left">
+        <div style="text-align: right" class="modifying">
+            <div class="modify-info-btn" onclick="clickModifyBtn()">
+                <img src="images/icon-edit.png" alt="修改资料">
+                <span>修改资料</span>
+            </div>
+            <div class="modify-info-btn" onclick="clickSaveModifyBtn()">
+                <img src="images/icon-edit.png" alt="修改资料">
+                <span>保存</span>
+            </div>
+            <div class="modify-info-btn" onclick="clickCancelModifyBtn()">
+                <img src="images/icon-edit.png" alt="修改资料">
+                <span>取消</span>
+            </div>
+        </div>
+        <img class="avatar" src="" id="avatar">
+        <h3 id="name">未登录</h3>
+        <h4>基本信息</h4>
+        <div class="split_line"></div>
+        <div id="base-info">
+            <!--            <div>-->
+            <!--                <p>性别：</p>-->
+            <!--                <p>男</p>-->
+            <!--            </div>-->
+
+            <!--            <div>-->
+            <!--                <p>籍贯：</p>-->
+            <!--                <p>湖南长沙</p>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <p>学校：</p>-->
+            <!--                <p>朝阳大学</p>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <p>学院：</p>-->
+            <!--                <p>计算机学院</p>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <p>专业：</p>-->
+            <!--                <p>计算机科学与技术</p>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <p>学号：</p>-->
+            <!--                <p>123456789</p>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <p>电话：</p>-->
+            <!--                <p>15566668888</p>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <p>邮箱：</p>-->
+            <!--                <p>example@pku.edu.cn</p>-->
+            <!--            </div>-->
+        </div>
+        <h4>数字人生</h4>
+        <div class="split_line"></div>
+        <div class="data_info">
+            <div class="data_item">
+                <p class="data_value" id="age">--</p>
+                <p class="label">年龄</p>
+            </div>
+            <div class="data_item">
+                <p class="data_value" id="projectNum">--</p>
+                <p class="label">项目数</p>
+            </div>
+            <div class="data_item">
+                <p class="data_value" id="fansNum">--</p>
+                <p class="label">粉丝数</p>
+            </div>
+            <div class="data_item">
+                <p class="data_value" id="assetNum">--</p>
+                <p class="label">资产</p>
+            </div>
+        </div>
+        <h4>联系方式</h4>
+        <div class="split_line"></div>
+        <div class="contact">
+            <img src="images/TR.png">
+            <img src="images/IG.png">
+            <img src="images/FB.png">
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="title">
+            <p>About Me</p>
+        </div>
+        <div class="about_me_content">
+            <img src="images/aboutMe.jpg">
+            <p id="about-me">
+                大家好，我叫xxx，作为一名计算机专业的大学生，我热爱我的专业并为其投入了巨大的热情和精力。在三年的学习生活中，我所学习的内容包括了从计算机的基础知识到运用等许多方面。通过对这些知识的学习，我对这一领域的相关知识有了一定程度的理解和掌握，此专业是一种工具，而利用此工具的能力是最重要的，在与课程同步进行的各种相关时践和实习中，具有了一定的实际操作能力和技术。在学校工作中，加强锻炼处世能力，学习管理知识，吸收管理经验。<br/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我知道计算机和网络是将来的工具，我能熟悉掌握windows系统，对linux、unix、有一定的了解。同时能较熟练操作c、foxpro、vb、access、asp、jsp等语言，同时对sql、oracle、spring
+                boot也有一定程度上的认识。</p>
+        </div>
+
+        <div class="title">
+            <p>我的特长</p>
+        </div>
+        <div class="about_me_content">
+            <p>我的特长是：我会唱、跳、rap、篮球！</p>
+        </div>
+
+        <div class="title">
+            <p>My Experience</p>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="point"></div>
+                <div class="line"></div>
+                <div class="content_timeline_box">
+                    <div class="content_timeline">
+                        <p class="date">2022年9月26日 21点15分</p>
+                        <p>
+                            web技术的第一个项目：个人简历，在这个项目中，用到了HMTL、CSS等相关知识。在这个过程中将理论应用于实践，我对相关技术有了更深的理解。</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="point"></div>
+                <div class="line"></div>
+                <div class="content_timeline_box">
+                    <div class="content_timeline">
+                        <p class="date">2022年9月25日 15点56分</p>
+                        <p>
+                            《Web项目开发(.NET)》的教学内容以工作过程为导向，以项目案例“会员销售管理系统”的开发过程为主线，深入浅出地介绍了应用ASR.NET技术实施Web项目开发的基础知识，内容包括ASR.NET运行环境与开发平台的构建。</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="point"></div>
+                <div class="line"></div>
+                <div class="content_timeline_box">
+                    <div class="content_timeline">
+                        <p class="date">2022年9月23日 8点23分</p>
+                        <p>
+                            大学生创新创业训练计划项目简称“大创”项目,包括创新训练项目、创业训练项目和创业实践项目三类,分为国家级、省级和校级三个级别。</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
+        <div class="title">
+            <p>Project Experience</p>
+        </div>
+        <ul>
+            <li>
+                <p>项目A</p>
+                <ul>
+                    <li><p>项目时间：2018.9-2019.1</p></li>
+                    <li><p>项目描述：在项目A中负责了前端的搭建</p></li>
+                    <li><p>技术栈：HTML/CSS/JS</p></li>
+                    <li><p>成果：优秀项目</p></li>
+                </ul>
+            </li>
+            <li>
+                <p>项目B</p>
+                <ul>
+                    <li><p>项目时间：2019.9-2012.1</p></li>
+                    <li><p>项目描述：在项目B中负责了安卓APP开发</p></li>
+                    <li><p>技术栈：Android</p></li>
+                    <li><p>成果：优秀项目</p></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="title">
+            <p>Educational Experience</p>
+        </div>
+        <ul>
+            <li>
+                <p>2020.9-至今</p>
+                <ul>
+                    <li><p>学校：朝阳大学</p></li>
+                    <li><p>专业：计算机科学与技术</p></li>
+                    <li><p>学历：本科学位</p></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>2017.9-2020.9</p>
+                <ul>
+                    <li><p>学校：xx中学</p></li>
+                    <li><p>班型：理科班</p></li>
+                    <li><p>阶段：高中</p></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="title">
+            <p>Photo Wall</p>
+        </div>
+        <img class="photo" src="images/photo1.jpg">
+    </div>
+</div>
+
+<div class="footer">
+    <p>Copyright ©87803, 2022, All Rights Reserved.</p>
+</div>
+</body>
+</html>
