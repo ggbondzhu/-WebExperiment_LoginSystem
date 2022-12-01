@@ -24,7 +24,9 @@
     <div class="right">
         <div class="search">
             <span>您可以使用手机号、邮箱或者学号进行精确搜索，也可以使用用户名、姓名、学校、学院、专业和籍贯进行模糊搜索</span>
-            <input type="text">
+            <label>
+                <input type="text">
+            </label>
             <button onclick="getUserBySearch(this.previousElementSibling.value)">搜索</button>
             <button onclick="getAllUser()">显示全部</button>
         </div>
@@ -50,6 +52,17 @@
                 <col>
             </colgroup>
         </table>
+        <div style="margin: 10px 0;text-align: center">
+            <span>共</span>
+            <span id="total">0</span>
+            <span>条数据，每页显示数量</span>
+            <label for="select"></label><select id="select">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">50</option>
+        </select>
+            <ul id="page"></ul>
+        </div>
     </div>
 
 </div>

@@ -1,5 +1,6 @@
 package controller;
 
+import com.alibaba.fastjson.JSONObject;
 import domain.UserInfo;
 import service.UserService;
 import service.impl.UserServiceImpl;
@@ -24,13 +25,27 @@ public class AdministratorController extends HttpServlet {
         String query = request.getParameter("query");
         HttpSession session = request.getSession();
         if (session.getAttribute("isAdmin") != null && (boolean) session.getAttribute("isAdmin")) {
+            JSONObject jsonObject = new JSONObject();
             List<UserInfo> data;
-            if (query == null) {
-                data = userService.findAllUserInfo();
-            } else {
+            if (query == null) {    //获取所有信息
+                if (!request.getParameter("page").equals("undefined") && !request.getParameter("pageSize").equals("undefined")) {
+                    int page = Integer.parseInt(request.getParameter("page"));
+                    int pageSize = Integer.parseInt(request.getParameter("pageSize"));
+                    data = userService.findAllUserInfo(page, pageSize);
+                    jsonObject.put("result", data);
+                    jsonObject.put("total", userService.getUserInfoCount());
+                    jsonObject.put("page", page);
+                } else {
+                    data = userService.findAllUserInfo(1, 10);
+                    jsonObject.put("result", data);
+                    jsonObject.put("total", userService.getUserInfoCount());
+                    jsonObject.put("page", 1);
+                }
+            } else {    //搜索
                 data = userService.findUserInfoBySearch(query);
+                jsonObject.put("result", data);
             }
-            ResponseUtils.responseJson(200, "管理员获取所有用户信息", data, response);
+            ResponseUtils.responseJson(200, "管理员获取所有用户信息", jsonObject, response);
         } else {
             ResponseUtils.responseJson(405, "非法操作，请登录后再试", response);
         }

@@ -60,7 +60,7 @@ a {
 
 .left {
     position: sticky;
-    top: 0px;
+    top: 0;
     width: 18%;
     border-right: #3e3e3e 1px solid;
     min-height: calc(100vh - 66px);
@@ -87,7 +87,6 @@ a {
 .right .delete-btn,
 .right .disable-btn,
 .search button {
-    margin: 10px 20px 0 0;
     background-color: #f56c6c;
     color: white;
     padding: 5px 15px;
@@ -203,4 +202,30 @@ a {
 
 .hide-display {
     display: none;
+}
+
+.checkbox {
+    width: 15px;
+    height: 15px;
+    margin: 16px 0 0 10px;
+}
+
+ul {
+    display: inline-block;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+ul li:hover {
+    color: #409eff;
+}
+
+ul li.active {
+    color: #409eff;
 }

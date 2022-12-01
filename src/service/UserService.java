@@ -26,6 +26,10 @@ public interface UserService {
 
     List<UserInfo> findAllUserInfo();
 
+    List<UserInfo> findAllUserInfo(int page, int pageSize);
+
+    int getUserInfoCount();
+
     List<UserInfo> findUserInfoBySearch(String query);
 
     boolean deleteUser(String username);

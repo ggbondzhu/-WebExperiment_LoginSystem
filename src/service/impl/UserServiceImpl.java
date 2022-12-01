@@ -82,6 +82,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public List<UserInfo> findAllUserInfo(int page, int pageSize) {
+        return personalInfoDao.findAllPersonalInfo((page - 1) * pageSize, pageSize);
+    }
+
+    @Override
+    public int getUserInfoCount() {
+        return personalInfoDao.getPersonalInfoCount();
+    }
+
+    @Override
     public List<UserInfo> findAllUserInfo() {
         return personalInfoDao.findAllPersonalInfo();
     }

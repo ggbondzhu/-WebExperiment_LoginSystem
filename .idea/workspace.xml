@@ -5,8 +5,26 @@
       <artifact name="LoginSystemServer:war exploded" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="86e347ee-a256-4aaa-b19d-8e3445a4046d" name="变更" comment="" />
+    <list default="true" id="86e347ee-a256-4aaa-b19d-8e3445a4046d" name="变更" comment="init">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbaee9d0-2388-4c4d-81e2-bc58470c4b1f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cbaee9d0-2388-4c4d-81e2-bc58470c4b1f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/email.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/email.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AdministratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AdministratorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/DeleteUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DeleteUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/PersonalInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/PersonalInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/impl/PersonalInfoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/impl/PersonalInfoDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WebLoginSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WebLoginSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WebLoginSystem/administrator/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/WebLoginSystem/administrator/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WebLoginSystem/administrator/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WebLoginSystem/administrator/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WebLoginSystem/administrator/js/administrator.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/WebLoginSystem/administrator/js/administrator.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +58,6 @@
   <component name="ProjectId" id="2Htc7lskZgcln2H2ZGVj4qOavVV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="false" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -50,11 +67,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/workspace/java/LoginSystemServer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "工件",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2862069",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -219,7 +240,9 @@
       <workItem from="1669878550826" duration="458000" />
       <workItem from="1669881959003" duration="170000" />
       <workItem from="1669885138616" duration="3057000" />
-      <workItem from="1669888437305" duration="975000" />
+      <workItem from="1669888437305" duration="1381000" />
+      <workItem from="1669903682442" duration="122000" />
+      <workItem from="1669903946360" duration="4169000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1669304467096</created>
@@ -242,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669888008607</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="init">
+      <created>1669889565414</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669889565414</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

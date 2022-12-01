@@ -1,21 +1,51 @@
 window.onload = function () {
-    getAllUser()
+    getAllUser();
+    let select = document.getElementById("select");
+    select.addEventListener("change", function () {
+        let value = select.value;
+        curPageSize = value;
+        curPage = 1;
+        getAllUser(curPage, value);
+    });
 }
 
 let tableData = [];
 
 let curSelect = "user";
+let curPage = 1;
+let curPageSize = 10;
 
-function getAllUser() {
-    request.get("/auth/getAllUsers", (code, res) => {
+function getAllUser(page, pageSize) {
+    request.get("/auth/getAllUsers?page=" + page + "&pageSize=" + pageSize, (code, res) => {
         if (code === 200) {
             if (res['code'] === 200) {
                 console.log(res)
-                tableData = res['data'];
+                tableData = res['data']['result'];
                 if (curSelect === "user") {
                     updateTable();
                 } else if (curSelect === "personal") {
                     updatePersonalInfoTable();
+                }
+                if (res['data']['total']) {
+                    // console.log(res['data']['total'])
+                    let total = document.getElementById("total");
+                    total.innerHTML = res['data']['total'];
+
+                    //更新ul
+                    let ul = document.getElementById("page");
+                    // console.log(ul)
+                    let newUl = document.createElement("ul");
+                    newUl.setAttribute("id", "page");
+                    ul.parentElement.replaceChild(newUl, ul);
+                    for (let i = 0; i < (res['data']['total']) / curPageSize; i++) {
+                        let li = document.createElement("li");
+                        li.innerHTML = i + 1 + "";
+                        if (i === curPage - 1) {
+                            li.classList.add("active");
+                        }
+                        li.setAttribute("onclick", "clickPage(this)");
+                        newUl.appendChild(li);
+                    }
                 }
             } else if (res['code'] === 405) {
                 window.location.href = "../redirect/index.html?id=notLogin";
@@ -29,12 +59,22 @@ function getAllUser() {
     })
 }
 
+function clickPage(page) {
+    let pages = document.querySelectorAll("#page li");
+    for (let i = 0; i < pages.length; i++) {
+        pages[i].classList.remove("active");
+    }
+    page.classList.add("active");
+    curPage = page.innerHTML;
+    getAllUser(curPage, curPageSize);
+}
+
 function getUserBySearch(query) {
     request.get("/auth/getAllUsers?query=" + query, (code, res) => {
         if (code === 200) {
             if (res['code'] === 200) {
                 console.log(res)
-                tableData = res['data'];
+                tableData = res['data']['result'];
                 if (curSelect === "user") {
                     updateTable();
                 } else if (curSelect === "personal") {
@@ -59,10 +99,13 @@ function updateTable() {
     thead.parentNode.replaceChild(newHead, thead);
     thead = document.getElementById("table-head");
     let th = [];
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 8; i++) {
         let newTh = document.createElement("th");
         th.push(newTh);
     }
+    let newTh = document.createElement("th");
+    newTh.innerHTML = "选择";
+    thead.appendChild(newTh);
     th[0].innerHTML = "ID";
     th[1].innerHTML = "用户名";
     th[2].innerHTML = "电话";
@@ -70,9 +113,16 @@ function updateTable() {
     th[4].innerHTML = "用户创建时间";
     th[5].innerHTML = "管理员";
     th[6].innerHTML = "已激活";
-    for (let i = 0; i < 7; i++) {
+    th[7].innerHTML = "操作";
+    let btn3 = document.createElement("button");
+    btn3.innerHTML = "删除选定用户";
+    btn3.setAttribute("onclick", "clickButton(this, 'delete')");
+    btn3.classList.add("delete-btn");
+    th[7].appendChild(btn3);
+    for (let i = 0; i < 8; i++) {
         thead.appendChild(th[i]);
     }
+
 
     let tbody = document.getElementById("table-body");
     let newTbody = document.createElement("tbody");
@@ -81,6 +131,10 @@ function updateTable() {
     tbody = document.getElementById("table-body");
     for (let i = 0; i < tableData.length; i++) {
         let tr = document.createElement("tr");
+        let checkbox = document.createElement("input");
+        checkbox.setAttribute("type", "checkbox");
+        checkbox.setAttribute("data-username", tableData[i]['userName']);
+        checkbox.classList.add("checkbox");
         let td1 = document.createElement("td");
         td1.innerHTML = tableData[i]['userID'];
         let td2 = document.createElement("td");
@@ -108,6 +162,7 @@ function updateTable() {
         btn2.classList.add("disable-btn");
         td8.appendChild(btn);
         td8.appendChild(btn2);
+        tr.appendChild(checkbox);
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
@@ -224,8 +279,24 @@ function clickMenu(index) {
 
 function clickButton(button, type) {
     // console.log(button);
-    let postData = {
-        "username": button.getAttribute("data-username"),
+    let postData;
+    if (button.getAttribute("data-username")) {
+        postData = {
+            "username": [button.getAttribute("data-username")],
+        }
+    } else {//说明点击的是删除选定用户按钮
+        let checkboxes = document.querySelectorAll(".checkbox");
+        let usernames = [];
+        // console.log(checkboxes);
+        for (let i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                usernames.push(checkboxes[i].getAttribute("data-username"));
+            }
+        }
+        postData = {
+            "username": usernames,
+        }
+        // console.log(usernames);
     }
     request.post("/auth/delete?type=" + type, postData, (code, res) => {
         if (code === 200) {
@@ -236,7 +307,7 @@ function clickButton(button, type) {
                 // let table = tr.parentNode;
                 // table.removeChild(tr);
 
-                getAllUser();
+                getAllUser(curPage, curPageSize);
             } else {
                 alert(res['msg']);
             }
@@ -246,14 +317,6 @@ function clickButton(button, type) {
             //info.firstChild.nodeValue = "网络或服务器错误，请稍后再试";
         }
     })
-}
-
-function clickSearchBtn() {
-
-}
-
-function clickCancelSearchBtn() {
-
 }
 
 function logout() {

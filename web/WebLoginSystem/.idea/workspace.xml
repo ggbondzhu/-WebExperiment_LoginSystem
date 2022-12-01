@@ -1,148 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="faf0300d-1210-46cc-b268-0a79060d03ff" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../../src/controller/AvatarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../src/controller/DeleteUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../src/controller/UserBaseInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../src/dao/PersonalInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../src/dao/impl/PersonalInfoDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../src/domain/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../src/util/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/js/administrator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorize/changePwd.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorize/forgetPwd.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorize/js/request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal/accountsetting.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal/js/personal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redirect/files/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redirect/files/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redirect/images/bg.jpg" afterDir="false" />
+    <list default="true" id="faf0300d-1210-46cc-b268-0a79060d03ff" name="变更" comment="新增 管理员页面批量删除用户，新增 管理员页面分页查询，不再一次性获取所有用户信息">
+      <change beforePath="$PROJECT_DIR$/../../.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/dataSources/cbaee9d0-2388-4c4d-81e2-bc58470c4b1f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/dataSources/cbaee9d0-2388-4c4d-81e2-bc58470c4b1f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/config/email.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/config/email.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../src/controller/AdministratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/controller/AdministratorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/controller/AuthorizeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/controller/AuthorizeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/controller/CrossOriginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/controller/CrossOriginFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/controller/ForgetPwdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/controller/ForgetPwdController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/controller/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/controller/LogoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/controller/RedirectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/controller/RedirectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/domain/UserCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/domain/UserCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/controller/DeleteUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/controller/DeleteUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/dao/PersonalInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/dao/PersonalInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/dao/impl/PersonalInfoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/dao/impl/PersonalInfoDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../src/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../src/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/util/HandleJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/util/JsonUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/util/ResponseUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/util/ResponseUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administratorPage/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/administratorPage/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/administratorPage/js/administratorPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/changePwd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/forgetPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/css/forgetPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forgetPwd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/captcha.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/captcha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/i-ui-yf0817-1-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/i-ui-yf0817-1-01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/location.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/location.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/pass1.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/pass1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/src=http___img.zcool.cn_community_01df175ba9fed7a801213dea1c5c2a.jpg_x-oss-process=image_auto-orient,1_resize,m_lfit,w_1280,limit_1_sharpen,100&amp;refer=http___img.zcool.webp" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/src=http___img.zcool.cn_community_01df175ba9fed7a801213dea1c5c2a.jpg_x-oss-process=image_auto-orient,1_resize,m_lfit,w_1280,limit_1_sharpen,100&amp;refer=http___img.zcool.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/user1.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/user1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/weather/云.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/weather/云.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/weather/晴.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/weather/晴.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/weather/花瓣素材-28414788.eps" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/weather/花瓣素材-28414788.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/weather/雨.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/weather/雨.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/weather/雪.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/weather/雪.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/weather/雷.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/weather/雷.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/weather/雷阵雨.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/weather/雷阵雨.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/weather/雾.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/weather/雾.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/weather/风.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/weather/风.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/weather/龙卷风.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/weather/龙卷风.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/weather_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/weather_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/changePwdPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/js/changePwdPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/forgetPwdPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/js/forgetPwdPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/lib.js" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/js/lib.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/js/loginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/md5.js" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/js/md5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/request.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/FB.png" beforeDir="false" afterPath="$PROJECT_DIR$/personal/images/FB.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/IG.png" beforeDir="false" afterPath="$PROJECT_DIR$/personal/images/IG.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/TR.png" beforeDir="false" afterPath="$PROJECT_DIR$/personal/images/TR.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/aboutMe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/personal/images/aboutMe.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/avatar.webp" beforeDir="false" afterPath="$PROJECT_DIR$/personal/images/avatar.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/personal/images/background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/background1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/personal/images/background1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/experience.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/personal/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/personalPageJs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/photo1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/personal/images/photo1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/speciality.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalPage/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/Bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/images/Bg2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/css/ie9.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/css/noscript.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/js/skel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/js/skel.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/js/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/js/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/base/_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/base/_page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/base/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/base/_typography.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/components/_box.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/components/_box.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/components/_button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/components/_form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/components/_form.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/components/_icon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/components/_icon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/components/_image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/components/_image.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/components/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/components/_list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/components/_table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/components/_table.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/ie9.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/ie9.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/layout/_bg.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/layout/_bg.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/layout/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/layout/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/layout/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/layout/_main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/layout/_wrapper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/layout/_wrapper.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/libs/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/libs/_functions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/libs/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/libs/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/libs/_skel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/libs/_skel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/libs/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/libs/_vars.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/assets/sass/noscript.scss" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/files/sass/noscript.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/cq1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/hg.jfif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/hyd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/images/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/authorize/images/bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/images/overlay.png" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/images/overlay.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/jquery-1.9.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/quickly.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/tj1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/tj2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/tj3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/tj4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/tplb.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/xcp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/files/xcp.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirectPage/lib.js" beforeDir="false" afterPath="$PROJECT_DIR$/redirect/js/lib.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/js/administrator.js" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/js/administrator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +37,6 @@
   <component name="ProjectId" id="2I1MOcqNp4GoqfY4aAEwGyDv0ju" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="false" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -226,6 +98,7 @@
       <workItem from="1669636504554" duration="6740000" />
       <workItem from="1669644227737" duration="39000" />
       <workItem from="1669712535870" duration="21000" />
+      <workItem from="1669904347811" duration="4378000" />
     </task>
     <servers />
   </component>
@@ -242,5 +115,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="新增 管理员页面批量删除用户，新增 管理员页面分页查询，不再一次性获取所有用户信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增 管理员页面批量删除用户，新增 管理员页面分页查询，不再一次性获取所有用户信息" />
   </component>
 </project>

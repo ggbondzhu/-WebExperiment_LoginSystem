@@ -84,10 +84,70 @@ public class PersonalInfoDaoImpl implements PersonalInfoDao {
     }
 
     @Override
+    public int getPersonalInfoCount() {
+        String sql = "select count(*) from personal_info";
+        try {
+            PreparedStatement ps = JdbcUtils.conn.prepareStatement(sql);
+            ResultSet resultSet = ps.executeQuery();
+            if (resultSet.next()) {
+                //userInfo.setUserID(resultSet.getInt("user_id"));
+                return resultSet.getInt(1);
+            }
+            return 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    @Override
     public List<UserInfo> findAllPersonalInfo() {
         String sql = "select * from personal_info join user u on u.user_id = personal_info.user_id order by u.user_id";
         try {
             PreparedStatement ps = JdbcUtils.conn.prepareStatement(sql);
+            ResultSet resultSet = ps.executeQuery();
+            List<UserInfo> userInfoList = new ArrayList<>();
+            while (resultSet.next()) {
+                //userInfo.setUserID(resultSet.getInt("user_id"));
+                UserInfo userInfo = new UserInfo();
+                userInfo.setNativePlace(resultSet.getString("native_place"));
+                userInfo.setAge(resultSet.getInt("age"));
+                userInfo.setProjectNum(resultSet.getInt("project_num"));
+                userInfo.setFansNum(resultSet.getInt("fans_num"));
+                userInfo.setAssetNum(resultSet.getInt("asset_num"));
+                userInfo.setAbout(resultSet.getString("about"));
+                //userInfo.setAvatarUrl(resultSet.getString("avatar_url"));
+                userInfo.setCollege(resultSet.getString("college"));
+                userInfo.setSno(resultSet.getString("sno"));
+                userInfo.setMajor(resultSet.getString("major"));
+                userInfo.setSchool(resultSet.getString("school"));
+                userInfo.setName(resultSet.getString("name"));
+                userInfo.setGender(resultSet.getBoolean("gender"));
+                userInfo.setPhone(resultSet.getString("phone"));
+                userInfo.setEmail(resultSet.getString("email"));
+                userInfo.setCreateTime(resultSet.getTimestamp("create_time"));
+                userInfo.setUserName(resultSet.getString("user_name"));
+                userInfo.setUserID(resultSet.getInt("user_id"));
+                userInfo.setAdmin(resultSet.getBoolean("is_admin"));
+                userInfo.setEnable(resultSet.getBoolean("enable"));
+                userInfoList.add(userInfo);
+            }
+            return userInfoList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public List<UserInfo> findAllPersonalInfo(int start, int pageSize) {
+//        String sql = "select * from personal_info join user u on u.user_id = personal_info.user_id order by u.user_id";
+        String sql = "SELECT * FROM (personal_info join user u on u.user_id = personal_info.user_id) ORDER BY u.user_id LIMIT ?,?;";
+        //SELECT * FROM tablename WHERE 查询条件 ORDER BY 排序条件 LIMIT ((页码-1)*页大小),页大小;
+        try {
+            PreparedStatement ps = JdbcUtils.conn.prepareStatement(sql);
+            ps.setInt(1, start);
+            ps.setInt(2, pageSize);
             ResultSet resultSet = ps.executeQuery();
             List<UserInfo> userInfoList = new ArrayList<>();
             while (resultSet.next()) {

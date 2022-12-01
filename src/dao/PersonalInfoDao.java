@@ -11,5 +11,10 @@ public interface PersonalInfoDao {
 
     List<UserInfo> findAllPersonalInfo();
 
+    //分页查询
+    List<UserInfo> findAllPersonalInfo(int start, int pageSize);
+
+    int getPersonalInfoCount();
+
     List<UserInfo> findPersonalInfoBySearch(String query);
 }

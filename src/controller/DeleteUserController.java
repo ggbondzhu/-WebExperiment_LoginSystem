@@ -1,5 +1,6 @@
 package controller;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import service.UserService;
 import service.impl.UserServiceImpl;
@@ -43,15 +44,20 @@ public class DeleteUserController extends HttpServlet {
         boolean isAdmin = (boolean) session.getAttribute("isAdmin");
         if (username != null && isAdmin) {   // 用户已登录且是管理员
             JSONObject jsonObject = JsonUtils.getRequestPostJson(request);
-            String deleteUsername = jsonObject.getString("username");
-            if (type.equals("delete")) {
-                if (userService.deleteUser(deleteUsername)) {
+            JSONArray deleteUsername = jsonObject.getJSONArray("username");
+            //System.out.println(deleteUsername);
+            if (type.equals("delete")) {    //更新：新增批量删除
+                boolean result = true;
+                for (int i = 0; i < deleteUsername.size(); i++) {
+                    result = result && userService.deleteUser(deleteUsername.getString(i));
+                }
+                if (result) {
                     ResponseUtils.responseJson(200, "账号已完全从数据库中删除", response);
                 } else {
-                    ResponseUtils.responseJson(400, "账号删除失败，请稍后再试", response);
+                    ResponseUtils.responseJson(400, "账号删除发生错误，请稍后再试", response);
                 }
             } else if (type.equals("enable")) {
-                if (userService.changeUserState(deleteUsername)) {
+                if (userService.changeUserState(deleteUsername.getString(0))) {
                     ResponseUtils.responseJson(200, "账号状态切换成功", response);
                 } else {
                     ResponseUtils.responseJson(400, "切换账号状态失败，请稍后再试", response);
