@@ -27,7 +27,7 @@
             <label>
                 <input type="text">
             </label>
-            <button onclick="getUserBySearch(this.previousElementSibling.value)">搜索</button>
+            <button onclick="getUserBySearch(this.previousElementSibling.firstElementChild.value)">搜索</button>
             <button onclick="getAllUser()">显示全部</button>
         </div>
         <table>
@@ -56,11 +56,12 @@
             <span>共</span>
             <span id="total">0</span>
             <span>条数据，每页显示数量</span>
-            <label for="select"></label><select id="select">
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">50</option>
-        </select>
+            <label for="select"></label>
+            <select id="select">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">50</option>
+            </select>
             <ul id="page"></ul>
         </div>
     </div>

@@ -16,6 +16,13 @@ let curPage = 1;
 let curPageSize = 10;
 
 function getAllUser(page, pageSize) {
+    console.log(page, pageSize);
+    if (page == undefined) {
+        page = curPage;
+    }
+    if (pageSize == undefined) {
+        pageSize = curPageSize;
+    }
     request.get("/auth/getAllUsers?page=" + page + "&pageSize=" + pageSize, (code, res) => {
         if (code === 200) {
             if (res['code'] === 200) {

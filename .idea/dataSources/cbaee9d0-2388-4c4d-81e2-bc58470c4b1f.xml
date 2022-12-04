@@ -1,50 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.45">
-    <root id="1">
-      <DefaultCasing>lower/lower</DefaultCasing>
-      <DefaultEngine>InnoDB</DefaultEngine>
-      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>eladmin|schema||normal_user|localhost|ALTER|G
-eladmin|schema||normal_user|localhost|ALTER ROUTINE|G
-eladmin|schema||normal_user|localhost|CREATE|G
-eladmin|schema||normal_user|localhost|CREATE ROUTINE|G
-eladmin|schema||normal_user|localhost|CREATE TEMPORARY TABLES|G
-eladmin|schema||normal_user|localhost|CREATE VIEW|G
-eladmin|schema||normal_user|localhost|DELETE|G
-eladmin|schema||normal_user|localhost|DROP|G
-eladmin|schema||normal_user|localhost|EVENT|G
-eladmin|schema||normal_user|localhost|EXECUTE|G
-eladmin|schema||normal_user|localhost|INDEX|G
-eladmin|schema||normal_user|localhost|INSERT|G
-eladmin|schema||normal_user|localhost|LOCK TABLES|G
-eladmin|schema||normal_user|localhost|REFERENCES|G
-eladmin|schema||normal_user|localhost|SELECT|G
-eladmin|schema||normal_user|localhost|SHOW VIEW|G
-eladmin|schema||normal_user|localhost|TRIGGER|G
-eladmin|schema||normal_user|localhost|UPDATE|G
-eladmin|schema||normal_user|localhost|grant option|G
-loginsystem|schema||normal_user|localhost|ALTER|G
-loginsystem|schema||normal_user|localhost|ALTER ROUTINE|G
-loginsystem|schema||normal_user|localhost|CREATE|G
-loginsystem|schema||normal_user|localhost|CREATE ROUTINE|G
-loginsystem|schema||normal_user|localhost|CREATE TEMPORARY TABLES|G
-loginsystem|schema||normal_user|localhost|CREATE VIEW|G
-loginsystem|schema||normal_user|localhost|DELETE|G
-loginsystem|schema||normal_user|localhost|DROP|G
-loginsystem|schema||normal_user|localhost|EVENT|G
-loginsystem|schema||normal_user|localhost|EXECUTE|G
-loginsystem|schema||normal_user|localhost|INDEX|G
-loginsystem|schema||normal_user|localhost|INSERT|G
-loginsystem|schema||normal_user|localhost|LOCK TABLES|G
-loginsystem|schema||normal_user|localhost|REFERENCES|G
-loginsystem|schema||normal_user|localhost|SELECT|G
-loginsystem|schema||normal_user|localhost|SHOW VIEW|G
-loginsystem|schema||normal_user|localhost|TRIGGER|G
-loginsystem|schema||normal_user|localhost|UPDATE|G
-loginsystem|schema||normal_user|localhost|grant option|G</Grants>
-      <ServerVersion>8.0.30</ServerVersion>
-    </root>
+    <root id="1"/>
     <collation id="2" parent="1" name="armscii8_general_ci">
       <Charset>armscii8</Charset>
       <DefaultForCharset>1</DefaultForCharset>
