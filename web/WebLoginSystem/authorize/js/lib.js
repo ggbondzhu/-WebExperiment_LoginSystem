@@ -85,3 +85,11 @@ function clickHeaderItem(target) {
     }
 }
 
+function changeToGrey() {
+    let item = document.getElementsByTagName("html")[0];
+    if (item.classList.contains("grey"))
+        item.classList.remove("grey");
+    else
+        item.classList.add("grey");
+}
+

@@ -204,7 +204,7 @@ function addUploadAvatarListener() {
         }
         // 获取File信息:
         info.innerHTML = `文件名称:  + ${file.name}<br>文件大小: ${file.size} <br>上传时间: ${file.lastModifiedDate}`;
-        if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
+        if (!['image/jpeg', 'image/png', 'image/gif', 'image/webp'].includes(file.type)) {
             alert('不是有效的图片文件!');
             return;
         }

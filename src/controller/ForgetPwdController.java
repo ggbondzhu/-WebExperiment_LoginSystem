@@ -88,6 +88,7 @@ public class ForgetPwdController extends HttpServlet {
                 }
                 break;
             default:
+                ResponseUtils.responseJson(400, "非法的请求！", response);
                 throw new IllegalStateException("Unexpected value: " + jsonObject.getString("type"));
         }
     }

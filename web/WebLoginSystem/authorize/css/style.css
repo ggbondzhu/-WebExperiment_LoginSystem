@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
-html {
+html.grey {
     /*灰色滤镜*/
-    /*filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);*/
-    /*-webkit-filter: grayscale(100%);*/
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter: grayscale(100%);
 }
 
 a {
