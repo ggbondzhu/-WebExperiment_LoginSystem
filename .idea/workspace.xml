@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86e347ee-a256-4aaa-b19d-8e3445a4046d" name="变更" comment="增加可手动切换登陆页面灰色滤镜">
+    <list default="true" id="86e347ee-a256-4aaa-b19d-8e3445a4046d" name="变更" comment="update README.md">
       <change beforePath="$PROJECT_DIR$/src/config/email.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/email.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +234,7 @@
       <workItem from="1670040759230" duration="603000" />
       <workItem from="1670064295243" duration="3109000" />
       <workItem from="1670149088978" duration="8199000" />
-      <workItem from="1670213512848" duration="15752000" />
+      <workItem from="1670213512848" duration="16121000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1669304467096</created>
@@ -271,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670246351220</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update README.md">
+      <created>1670246723321</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670246723322</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +314,8 @@
     </ignored-roots>
     <MESSAGE value="init" />
     <MESSAGE value="增加可手动切换登陆页面灰色滤镜" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加可手动切换登陆页面灰色滤镜" />
+    <MESSAGE value="update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
