@@ -122,6 +122,20 @@
     </div>
 
     <div class="content">
+        <div style="text-align: right" class="modifying2">
+            <div class="modify-info-btn" onclick="clickModifyBtn2()">
+                <img src="images/icon-edit.png" alt="修改资料">
+                <span>修改资料</span>
+            </div>
+            <div class="modify-info-btn" onclick="clickSaveModifyBtn2()">
+                <img src="images/icon-edit.png" alt="修改资料">
+                <span>保存</span>
+            </div>
+            <div class="modify-info-btn" onclick="clickCancelModifyBtn2()">
+                <img src="images/icon-edit.png" alt="修改资料">
+                <span>取消</span>
+            </div>
+        </div>
         <div class="title">
             <p>About Me</p>
         </div>
@@ -136,65 +150,66 @@
             <p>我的特长</p>
         </div>
         <div class="about_me_content">
-            <p>我的特长是：我会唱、跳、rap、篮球！</p>
+            <p id="techang">我的特长是：我会唱、跳、rap、篮球！</p>
         </div>
 
         <div class="title">
             <p>My Experience</p>
         </div>
-        <ul class="timeline">
-            <li>
-                <div class="point"></div>
-                <div class="line"></div>
-                <div class="content_timeline_box">
-                    <div class="content_timeline">
-                        <p class="date">2022年9月26日 21点15分</p>
-                        <p>
-                            web技术的第一个项目：个人简历，在这个项目中，用到了HMTL、CSS等相关知识。在这个过程中将理论应用于实践，我对相关技术有了更深的理解。</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="point"></div>
-                <div class="line"></div>
-                <div class="content_timeline_box">
-                    <div class="content_timeline">
-                        <p class="date">2022年9月25日 15点56分</p>
-                        <p>
-                            《Web项目开发(.NET)》的教学内容以工作过程为导向，以项目案例“会员销售管理系统”的开发过程为主线，深入浅出地介绍了应用ASR.NET技术实施Web项目开发的基础知识，内容包括ASR.NET运行环境与开发平台的构建。</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="point"></div>
-                <div class="line"></div>
-                <div class="content_timeline_box">
-                    <div class="content_timeline">
-                        <p class="date">2022年9月23日 8点23分</p>
-                        <p>
-                            大学生创新创业训练计划项目简称“大创”项目,包括创新训练项目、创业训练项目和创业实践项目三类,分为国家级、省级和校级三个级别。</p>
-                    </div>
-                </div>
-            </li>
+        <ul class="timeline" id="timeline">
+            <!--            <li>-->
+            <!--                <div class="point"></div>-->
+            <!--                <div class="line"></div>-->
+            <!--                <div class="content_timeline_box">-->
+            <!--                    <div class="content_timeline" id="timeline111">-->
+            <!--                        <p class="date">2022年9月26日 21点15分</p>-->
+            <!--                        <p class="content_timeline_real_content">-->
+            <!--                            web技术的第一个项目：个人简历，在这个项目中，用到了HMTL、CSS等相关知识。在这个过程中将理论应用于实践，我对相关技术有了更深的理解。</p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </li>-->
+            <!--            <li>-->
+            <!--                <div class="point"></div>-->
+            <!--                <div class="line"></div>-->
+            <!--                <div class="content_timeline_box">-->
+            <!--                    <div class="content_timeline" id="timeline222">-->
+            <!--                        <p class="date">2022年9月25日 15点56分</p>-->
+            <!--                        <p class="content_timeline_real_content">-->
+            <!--                            《Web项目开发(.NET)》的教学内容以工作过程为导向，以项目案例“会员销售管理系统”的开发过程为主线，深入浅出地介绍了应用ASR.NET技术实施Web项目开发的基础知识，内容包括ASR.NET运行环境与开发平台的构建。</p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </li>-->
+            <!--            <li>-->
+            <!--                <div class="point"></div>-->
+            <!--                <div class="line"></div>-->
+            <!--                <div class="content_timeline_box">-->
+            <!--                    <div class="content_timeline" id="timeline333">-->
+            <!--                        <p class="date">2022年9月23日 8点23分</p>-->
+            <!--                        <p class="content_timeline_real_content">-->
+            <!--                            大学生创新创业训练计划项目简称“大创”项目,包括创新训练项目、创业训练项目和创业实践项目三类,分为国家级、省级和校级三个级别。</p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </li>-->
         </ul>
 
+        <button class="add_timeline" onclick="clickAddTimelineBtn()">添加经历</button>
 
         <div class="title">
             <p>Project Experience</p>
         </div>
-        <ul>
-            <li>
-                <p>项目A</p>
-                <ul>
+        <ul class="project_experience" id="project_experience">
+            <li class="project_item" id="project1">
+                <p class="project_item_name">项目A</p>
+                <ul class="project_item_ul">
                     <li><p>项目时间：2018.9-2019.1</p></li>
                     <li><p>项目描述：在项目A中负责了前端的搭建</p></li>
                     <li><p>技术栈：HTML/CSS/JS</p></li>
                     <li><p>成果：优秀项目</p></li>
                 </ul>
             </li>
-            <li>
-                <p>项目B</p>
-                <ul>
+            <li class="project_item" id="project2">
+                <p class="project_item_name">项目B</p>
+                <ul class="project_item_ul">
                     <li><p>项目时间：2019.9-2012.1</p></li>
                     <li><p>项目描述：在项目B中负责了安卓APP开发</p></li>
                     <li><p>技术栈：Android</p></li>
@@ -202,31 +217,30 @@
                 </ul>
             </li>
         </ul>
+        <button class="add_project" onclick="clickAddProjectBtn()">添加项目经历</button>
 
         <div class="title">
             <p>Educational Experience</p>
         </div>
-        <ul>
-            <li>
-                <p>2020.9-至今</p>
-                <ul>
+        <ul class="project_educational" id="project_educational">
+            <li class="project_item" id="project3">
+                <p class="project_item_name">2020.9-至今</p>
+                <ul class="project_item_ul">
                     <li><p>学校：朝阳大学</p></li>
                     <li><p>专业：计算机科学与技术</p></li>
                     <li><p>学历：本科学位</p></li>
                 </ul>
             </li>
-        </ul>
-        <ul>
-            <li>
-                <p>2017.9-2020.9</p>
-                <ul>
+            <li class="project_item" id="project4">
+                <p class="project_item_name">2017.9-2020.9</p>
+                <ul class="project_item_ul">
                     <li><p>学校：xx中学</p></li>
                     <li><p>班型：理科班</p></li>
                     <li><p>阶段：高中</p></li>
                 </ul>
             </li>
         </ul>
-
+        <button class="add_educational" onclick="clickAddEducationalBtn()">添加教育经历</button>
         <div class="title">
             <p>Photo Wall</p>
         </div>

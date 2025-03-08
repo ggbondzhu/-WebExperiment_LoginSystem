@@ -102,6 +102,23 @@ a, a:visited, a:link, a:active {
 }
 
 
+.modifying2 > div:first-child {
+    display: inline-block;
+}
+
+.modifying2 > div:nth-child(2), .modifying2 > div:nth-child(3) {
+    display: none;
+}
+
+.modifying2.user-modifying > div:first-child {
+    display: none;
+}
+
+.modifying2.user-modifying > div:nth-child(2), .modifying2.user-modifying > div:nth-child(3) {
+    display: inline-block;
+}
+
+
 .modify-info-btn img {
     height: 20px;
     width: 20px;
@@ -293,4 +310,34 @@ a, a:visited, a:link, a:active {
     padding: 0 5px;
     margin: 10px 0;
     background-color: #f8f7f7;
+}
+
+textarea {
+    width: 70%;
+    height: 100px;
+    font-size: 16px;
+    /*设置边框为黑色*/
+    border: #1b1f22 1px solid;
+    /*边框设置圆角*/
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    margin: 10px 0;
+    background-color: #faf8f8;
+}
+
+.add_timeline, .delete-timeline, .add_educational, .add_project {
+    background-color: #6cc0f5;
+    color: white;
+    padding: 5px 15px;
+    margin: 2px 3px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    transition: .5s;
+}
+
+.delete-timeline {
+    background-color: #f56c6c;
 }
