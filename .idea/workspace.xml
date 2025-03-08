@@ -175,6 +175,10 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Tomcat 服务器.Tomcat 9.0.69" />
+      <item itemvalue="应用程序.test" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.test" />
