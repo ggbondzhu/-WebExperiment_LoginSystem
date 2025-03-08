@@ -9,8 +9,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86e347ee-a256-4aaa-b19d-8e3445a4046d" name="变更" comment="update README.md">
-      <change beforePath="$PROJECT_DIR$/src/config/email.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/email.properties" afterDir="false" />
+    <list default="true" id="86e347ee-a256-4aaa-b19d-8e3445a4046d" name="变更" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/dao/EducationalDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/ProjectDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/TimelineDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/impl/EducationalDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/impl/ProjectDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/impl/TimelineDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/Educational.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/Timeline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/EducationalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/ProjectService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/TimelineService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/impl/EducationalServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/impl/ProjectServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/impl/TimelineServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/UserBaseInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/UserBaseInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/impl/PersonalInfoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/impl/PersonalInfoDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WebLoginSystem/personal/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/WebLoginSystem/personal/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WebLoginSystem/personal/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/WebLoginSystem/personal/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WebLoginSystem/personal/js/personal.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/WebLoginSystem/personal/js/personal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,13 +50,33 @@
       </list>
     </option>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ggbondzhu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ggbondzhu/-WebExperiment_LoginSystem.git&quot;,
+    &quot;accountId&quot;: &quot;8be20d88-4dab-4e3b-a6ee-8fce70d9c983&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -42,35 +87,41 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2Htc7lskZgcln2H2ZGVj4qOavVV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/workspace/java/LoginSystemServer&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2862069&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Tomcat 服务器.Tomcat 9.0.69.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/zhujiuxiang/Documents/code/my/IdeaProjects/-WebExperiment_LoginSystem",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "工件",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2862069",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="dao.impl" />
@@ -88,7 +139,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.69" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.69" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.69" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.69" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="18" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="LoginSystemServer:war exploded">
@@ -185,6 +236,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -239,6 +298,8 @@
       <workItem from="1670064295243" duration="3109000" />
       <workItem from="1670149088978" duration="8199000" />
       <workItem from="1670213512848" duration="16121000" />
+      <workItem from="1741400165382" duration="7141000" />
+      <workItem from="1741427425129" duration="1703000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1669304467096</created>
@@ -299,7 +360,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main2" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -319,7 +380,54 @@
     <MESSAGE value="init" />
     <MESSAGE value="增加可手动切换登陆页面灰色滤镜" />
     <MESSAGE value="update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/impl/TimelineDaoImpl.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/impl/TimelineDaoImpl.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/impl/TimelineDaoImpl.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/UserBaseInfoController.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/UserBaseInfoController.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/UserBaseInfoController.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/UserBaseInfoController.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/UserBaseInfoController.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
