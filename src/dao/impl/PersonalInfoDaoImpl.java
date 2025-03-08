@@ -13,7 +13,7 @@ import java.util.List;
 public class PersonalInfoDaoImpl implements PersonalInfoDao {
     //更新用户信息，只更新有值的那部分
     @Override
-    public boolean updatePersonalInfo(UserInfo userInfo, String username) {
+    public boolean  updatePersonalInfo(UserInfo userInfo, String username) {
         String sql = "UPDATE `loginsystem`.`personal_info` SET `gender` = IFNULL(?,`personal_info`.gender), " +
                 " `school` = IFNULL(?,`personal_info`.school), `college` = IFNULL(?,`personal_info`.college)," +
                 " `major` = IFNULL(?,`personal_info`.major), `sno` = IFNULL(?,`personal_info`.sno), `native_place` = IFNULL(?,`personal_info`.native_place)," +
