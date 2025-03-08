@@ -14,6 +14,7 @@ public class UserInfo extends User {
     String about;
     String avatarUrl;
     String name;
+    String techang;
 
     public UserInfo() {
 
@@ -34,6 +35,8 @@ public class UserInfo extends User {
                 ", assetNum=" + assetNum +
                 ", about='" + about + '\'' +
                 ", avatarUrl='" + avatarUrl + '\'' +
+                ", name='" + name + '\'' +
+                ", techang='" + techang + '\'' +
                 '}';
     }
 
@@ -140,5 +143,13 @@ public class UserInfo extends User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getTechang() {
+        return techang;
+    }
+
+    public void setTechang(String techang) {
+        this.techang = techang;
     }
 }

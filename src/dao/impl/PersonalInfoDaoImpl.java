@@ -13,12 +13,13 @@ import java.util.List;
 public class PersonalInfoDaoImpl implements PersonalInfoDao {
     //更新用户信息，只更新有值的那部分
     @Override
-    public boolean  updatePersonalInfo(UserInfo userInfo, String username) {
-        String sql = "UPDATE `loginsystem`.`personal_info` SET `gender` = IFNULL(?,`personal_info`.gender), " +
+    public boolean updatePersonalInfo(UserInfo userInfo, String username) {
+        String sql = "UPDATE personal_info   SET `gender` = IFNULL(?,`personal_info`.gender), " +
                 " `school` = IFNULL(?,`personal_info`.school), `college` = IFNULL(?,`personal_info`.college)," +
                 " `major` = IFNULL(?,`personal_info`.major), `sno` = IFNULL(?,`personal_info`.sno), `native_place` = IFNULL(?,`personal_info`.native_place)," +
                 "`age` = IF(?,?,`personal_info`.age), `project_num` = IF(?,?,`personal_info`.project_num), `fans_num` = IF(?,?,`personal_info`.fans_num), `asset_num` = IF(?,?,`personal_info`.asset_num)," +
-                " `about` = IFNULL(?,`personal_info`.about), `avatar_url` = IFNULL(?,`personal_info`.avatar_url),`name` = IFNULL(?,`personal_info`.name) WHERE `user_id` = (SELECT user_id from user WHERE user_name = ?);";
+                " `about` = IFNULL(?,`personal_info`.about), `avatar_url` = IFNULL(?,`personal_info`.avatar_url),`name` = IFNULL(?,`personal_info`.name), `techang` = IFNULL(?,`personal_info`.techang) " +
+                " WHERE `user_id` = (SELECT user_id from user WHERE user_name = ?);";
         try {
             PreparedStatement ps = JdbcUtils.conn.prepareStatement(sql);
             ps.setBoolean(1, userInfo.isGender());
@@ -38,7 +39,8 @@ public class PersonalInfoDaoImpl implements PersonalInfoDao {
             ps.setString(15, userInfo.getAbout());
             ps.setString(16, userInfo.getAvatarUrl());
             ps.setString(17, userInfo.getName());
-            ps.setString(18, username);
+            ps.setString(18, userInfo.getTechang());
+            ps.setString(19, username);
             int result = ps.executeUpdate();
             if (result == 1) {
                 return true;
@@ -75,6 +77,8 @@ public class PersonalInfoDaoImpl implements PersonalInfoDao {
                 userInfo.setGender(resultSet.getBoolean("gender"));
                 userInfo.setPhone(resultSet.getString("phone"));
                 userInfo.setEmail(resultSet.getString("email"));
+                userInfo.setTechang(resultSet.getString("techang"));
+                userInfo.setUserID(resultSet.getInt("user_id"));
             }
             return userInfo;
         } catch (SQLException e) {
@@ -130,6 +134,7 @@ public class PersonalInfoDaoImpl implements PersonalInfoDao {
                 userInfo.setUserID(resultSet.getInt("user_id"));
                 userInfo.setAdmin(resultSet.getBoolean("is_admin"));
                 userInfo.setEnable(resultSet.getBoolean("enable"));
+                userInfo.setTechang(resultSet.getString("techang"));
                 userInfoList.add(userInfo);
             }
             return userInfoList;
@@ -173,6 +178,7 @@ public class PersonalInfoDaoImpl implements PersonalInfoDao {
                 userInfo.setUserID(resultSet.getInt("user_id"));
                 userInfo.setAdmin(resultSet.getBoolean("is_admin"));
                 userInfo.setEnable(resultSet.getBoolean("enable"));
+                userInfo.setTechang(resultSet.getString("techang"));
                 userInfoList.add(userInfo);
             }
             return userInfoList;
@@ -219,6 +225,7 @@ public class PersonalInfoDaoImpl implements PersonalInfoDao {
                 userInfo.setUserID(resultSet.getInt("user_id"));
                 userInfo.setAdmin(resultSet.getBoolean("is_admin"));
                 userInfo.setEnable(resultSet.getBoolean("enable"));
+                userInfo.setTechang(resultSet.getString("techang"));
                 userInfoList.add(userInfo);
             }
             return userInfoList;

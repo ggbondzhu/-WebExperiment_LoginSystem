@@ -219,7 +219,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public boolean updateUserPhoneEmail(UserInfo userInfo, String username) {
-        String sql = "UPDATE `loginsystem`.`user` SET `email` = IFNULL(?,`user`.email), " +
+        String sql = "UPDATE `user` SET `email` = IFNULL(?,`user`.email), " +
                 " `phone` = IFNULL(?,`user`.phone) WHERE `user_name` = ?;";
         try {
             PreparedStatement ps = JdbcUtils.conn.prepareStatement(sql);
